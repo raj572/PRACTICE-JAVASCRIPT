@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TICKET PRICING</h1>
+    <label for="age"><input type="number" id="age" placeholder="ENTER AGE"></label><br><br>
+    <input type="submit" value="SUBMIT" onclick="calprice()"><br><br>
+    <p id="res" style="font-size: larger; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center; color: blueviolet;" ></p>
+    <script>
+        function calprice(){
+            let age=document.getElementById("age").value;
+            let res;
+            if(age<12){
+                res="PRICE IS 5$";
+                document.getElementById("res").innerHTML=res;
+            }
+            else if(age>=12 && age<=18){
+                res="PRICE IS 8$";
+                document.getElementById("res").innerHTML=res;
+            }
+            else if(age>18){
+                res="PRICE IS 10$";
+                document.getElementById("res").innerHTML=res;
+            }
+        
+        }
+    </script>
+
+</body>
+</html>

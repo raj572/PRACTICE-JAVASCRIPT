@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>LEAP YEAR CHECKER</h1>
+    <label for="year"><input type="number" id="year" placeholder="ENTER YEAR"></label><br><br>
+    <input type="submit" value="CHECK" onclick="leapYearChecker()"><br><br>
+    <p id="res" style="font-size: larger; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center; color: blueviolet;" ></p>
+    <script>
+        function leapYearChecker()
+        {
+            let year=document.getElementById("year").value;
+            let res;
+            if(year%4==0 && year%100!=0||year%400==0){
+                res=year+" IS A LEAP YEAR";
+                document.getElementById("res").innerHTML=res;
+            }
+            else{
+                res=year+" IS NOT A LEAP YEAR";
+                document.getElementById("res").innerHTML=res;
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>GRADE CALCULATOR</h1>
+    <label for="score"><input type="number" id="score" placeholder="ENTER SCORE"></label><br><br>
+    <input type="submit" value="GRADE" onclick="grade()"><br><br>
+    <p id="res"
+        style="font-size: 100px; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center; color: blueviolet;">
+    </p>
+    <script>
+        function grade() {
+            let score = parseInt(document.getElementById("score").value);
+            let res;
+
+            switch (true) {
+                case (score < 33):
+                    res = 'F';
+                    break;
+                case (score >= 33 && score < 40):
+                    res = 'D';
+                    break;
+                case (score >= 40 && score < 50):
+                    res = 'C';
+                    break;
+                case (score >= 50 && score < 60):
+                    res = 'B';
+                    break;
+                case (score >= 60 && score <= 85):
+                    res = 'A';
+                    break;
+                case (score > 85 && score <= 100):
+                    res = 'S';
+                    break;
+                default:
+                    res = 'Invalid Score';
+            }
+
+            document.getElementById("res").innerHTML = res;
+        }
+    </script>
+</body>
+
+</html>

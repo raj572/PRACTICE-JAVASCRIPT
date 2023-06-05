@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>SHOPPING DISCOUNT</h1>
+    <label for="item"><input type="number" id="item" placeholder="ENTER NUMBER OF ITEMS"></label><br><br>
+    <input type="submit" value="DISCOUNT" onclick="discount()"><br><br>
+    <p id="res" style="font-size: larger; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center; color: blueviolet;" ></p>
+    <script>
+        function discount()
+        {
+            let item=document.getElementById("item").value;
+            let res;
+            if (item<=10){
+                res="HURRAY! YOU GOT 10% DISCOUNT!";
+                document.getElementById("res").innerHTML=res;
+            }
+            else if (item>10&&item<=20){
+                res="HURRAY! YOU GOT 20% DISCOUNT!";
+                document.getElementById("res").innerHTML=res;
+            }
+            else if (item>20&&item<=30){
+                res="HURRAY! YOU GOT 30% DISCOUNT!";
+                document.getElementById("res").innerHTML=res;
+            }
+            else if (item>30&&item<=40){
+                res="HURRAY! YOU GOT 50% DISCOUNT!";
+                document.getElementById("res").innerHTML=res;
+            }
+            else if (item>40&&item<=50){
+                res="HURRAY! YOU GOT 50% DISCOUNT!";
+                document.getElementById("res").innerHTML=res;
+            }
+            else if (item>50&&item<=100){
+                res="HURRAY! YOU GOT 75% DISCOUNT!";
+                document.getElementById("res").innerHTML=res;
+            }
+           
+        }
+    </script>
+</body>
+</html>

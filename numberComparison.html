@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>NUMBER COMPARISON</h1>
+    <label for="fn"><input type="text" id="fn" placeholder="ENTER FIRST NUMBER"></label><br><br>
+    <label for="sn"><input type="text" id="sn" placeholder="ENTER SECOND NUMBER"></label><br><br>
+    <p id="res" style="font-size: larger; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center; color: blueviolet;" ></p>
+    <input type="submit" value="COMPARE" onclick="compare()">
+    <script>
+        function compare()
+        {
+            let fn=document.getElementById("fn").value;
+            let sn=document.getElementById("sn").value;
+            let res;
+            if(Number(fn)>Number(sn)){
+                res=fn+" IS GREATER THAN "+sn;
+                document.getElementById("res").innerHTML=res;
+
+            }
+            else if(Number(sn)>Number(fn)){
+                res=sn+" IS GREATER THAN "+fn;
+                document.getElementById("res").innerHTML=res;
+            }
+            else{
+                res="BOTH ARE EQUAL";
+                document.getElementById("res").innerHTML=res;
+
+            }
+        }
+    </script>
+
+</body>
+</html>

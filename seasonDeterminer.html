@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>SEASON DETERMINER</h1>
+    <label for="season">
+        <select id="season">
+            <option>SELECT</option>
+            <option>JANUARY</option>
+            <option>FEBRUARY</option>
+            <option>MARCH</option>
+            <option>APRIL</option>
+            <option>MAY</option>
+            <option>JUNE</option>
+            <option>JULY</option>
+            <option>AUGUST</option>
+            <option>SEPTEMBER</option>
+            <option>OCTOBER</option>
+            <option>NOVEMBER</option>
+            <option>DECEMBER</option>
+        </select>
+        <input type="submit" value="SEASON" onclick="seasonName()">
+        <p id="res"
+            style="font-size: larger; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center; color: blueviolet;">
+        </p>
+        <script>
+            function seasonName() {
+                let season = document.getElementById("season").value;
+                let res;
+                switch (season) {
+                    case "JANUARY":
+                        res = 'WINTER';
+                        document.getElementById("res").innerHTML = res;
+                        break;
+                    case "FEBRUARY":
+                        res = 'WINTER';
+                        document.getElementById("res").innerHTML = res;
+                        break;
+                    case "DECEMBER":
+                        res = 'WINTER';
+                        document.getElementById("res").innerHTML = res;
+                        break;
+                    case "NOVEMBER":
+                        res = 'AUTOMN';
+                        document.getElementById("res").innerHTML = res;
+                        break;
+                    case "OCTOBER":
+                        res = 'AUTOMN';
+                        document.getElementById("res").innerHTML = res;
+                        break;
+                    case "MARCH":
+                        res = 'SPRING';
+                        document.getElementById("res").innerHTML = res;
+                        break;
+                    case "APRIL":
+                        res = 'SPRING';
+                        document.getElementById("res").innerHTML = res;
+                        break;
+                    case "MAY":
+                        res = 'SUMMER';
+                        document.getElementById("res").innerHTML = res;
+                        break;
+                    case "JUNE":
+                        res = 'SUMMER';
+                        document.getElementById("res").innerHTML = res;
+                        break;
+                    case "JULY":
+                        res = 'RAINY';
+                        document.getElementById("res").innerHTML = res;
+                        break;
+                    case "AUGUST":
+                        res = 'RAINY';
+                        document.getElementById("res").innerHTML = res;
+                        break;
+                    case "SEPTEMBER":
+                        res = 'RAINY';
+                        document.getElementById("res").innerHTML = res;
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+        </script>
+    </label>
+</body>
+
+</html>
