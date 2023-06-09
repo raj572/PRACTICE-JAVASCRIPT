@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body
+        {
+            margin: 0px;
+            padding: 0%;
+        }
+     
+        .table-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 50px;
+            background-color: aqua;
+            color: black;
+        }
+        .table-column {
+            flex: 1 0 10%;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+        .table-column:last-child {
+            margin-right: 0;
+        }
+    
+        @media (max-width: 768px) {
+            .table-column {
+                flex: 1 0 45%;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .table-column {
+                flex: 1 0 100%;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            .table-container {
+                justify-content: center;
+            }
+        }
+        .header
+        {
+            background-image: linear-gradient(to top, rgb(21, 21, 66),black);
+            height: 50px;
+            width: 100%;
+            margin-bottom: 20px;
+            
+        }
+        .header p{
+            color: aqua;
+            font-size: larger;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 600;
+            padding: 8px;
+            text-align: center;
+        }
+        .content
+        {
+            justify-content: center;
+        }
+        .inform
+        {
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(11, 11, 63);
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="header">
+        <P>NUMBER TABLE PRINTER</P>
+    </div>
+    <div class="inform"><p>
+        THIS TOOL CAN PRINT TABLE FROM YOUR STARTING NUMBER TO END NUMBER. <br>FOR EXAMPLE- IF YOU WANT TO PRINT TABLE FROM 2 TO 5 THEN IT <br>IT WILL PRINT ALL TABLE FROM 2 TO 5. FOR MORE INFORMATION JUST ENTER YOUR NUMBER NUMBER AND SECOND NUMBER.
+    </p></div>
+
+    <div class="content">
+        <label for="first"><input type="text" id="first" placeholder="ENTER FIRST NUMBER"></label><br><br>
+        <label for="second"><input type="text" id="second" placeholder="ENTER SECOND NUMBER"></label><br><br>
+        <label for="sub"><input type="submit" value="SUBMIT" onclick="number_table()"></label>
+        <div id="table" class="table-container"></div>
+
+    </div>
+
+    <script>
+        function number_table() {
+            let f = parseInt(document.getElementById("first").value);
+            let s = parseInt(document.getElementById("second").value);
+
+           
+            let tableHTML = '';
+
+            for (let i = f; i <= s; i++) {
+                tableHTML += '<div class="table-column">';
+                tableHTML += "<h3>Table for " + i + "</h3>";
+                for (let j = 1; j <= 10; j++) {
+                    let t = i * j;
+                    tableHTML += "<p>" + i + " X " + j + " = " + t + "</p>";
+                }
+                tableHTML += '</div>';
+            }
+
+            document.getElementById("table").innerHTML = tableHTML;
+        }
+    </script>
+</body>
+</html>
